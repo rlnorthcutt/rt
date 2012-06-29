@@ -1,0 +1,6 @@
+/* add any CSS  code here that should apply to the whole site regardless of theme */
+
+#rt-footer {padding:10px;margin:20px;}
+#rt-footer h2, #rt-footer a {font-size:8pt;font-weight:bold;text-align:center; }
+#rt-footer-admin {border: solid thin #CCC;padding: 10px;float: left;border-radius: 5px;margin-top: 10px;}
+body #page {padding-bottom: 0px!important;}

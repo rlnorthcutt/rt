@@ -1,0 +1,10 @@
+name = Real Tidings Custom Code
+description = "A custom module provided by Real Tidings, LLC to tie some features together in the background. Contact Ron if you want to modify this: admin@realtidings.com."
+package = Core - optional
+core = 7.x
+
+stylesheets[all][] = rt.css
+
+;uncomment the line below to add JS or jQuery to the entire site
+;scripts[] = rt.js
+
