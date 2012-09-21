@@ -2,13 +2,15 @@
 
 /**
  * @file
- * A custom module provided by Real Tidings, LLC to tie some features together in the background.
- * for more sample code and starting points, visit http://drupal.org/project/examples
+ * A custom module provided by Real Tidings, LLC to tie some features together 
+ * in the background. For more sample code and starting points, 
+ * visit http://drupal.org/project/examples
  */
  
 /**
- * Wrapper for the dpm() function to prevent it from accidentally breaking your site if the devel module is inactive
- * note: we break the naming convention here for ease of use implementing this function
+ * Wrapper for the dpm() function to prevent it from accidentally breaking your 
+ * site if the devel module is inactive
+ * note: we break the naming convention here for ease of use implementing 
  */
 function mydpm($input) {
   if (function_exists('dpm')) { 
@@ -25,7 +27,7 @@ function rt_page_alter(&$page) {
 	global $theme_key;
 	if (variable_get('admin_theme') == $theme_key) {
 		$page['content']['rt-footer'] = array(
-			'#markup' => '<div id="rt-footer-admin"><h3>Need help?</h3><ul><li>please <a href="http://realtidings.com/support">submit a support request</a></li><li> or email <a href="mailto://support@realtidings.com">support@realtidings.com.</a></li></ul></div>', 
+			'#markup' => '<div id="rt-footer-logo"><a href="http://www.realtidings.com"><img src="/' . drupal_get_path('module', 'rt') . '/logo.png"></a></div><div id="rt-footer-admin"><h3>Need help?</h3><ul><li>please <a href="http://realtidings.com/support">submit a support request</a></li><li> or email <a href="mailto://support@realtidings.com">support@realtidings.com.</a></li></ul></div>', 
 			'#weight' => 90,
 		);
 	} else {
